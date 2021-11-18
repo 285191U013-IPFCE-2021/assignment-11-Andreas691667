@@ -6,7 +6,7 @@
 
 int sumn (int n)
 {
-    // assert(n>1);
+    assert(n>1);
 
     //base case: when n equals 1, the answer is 1
     if (n == 1)

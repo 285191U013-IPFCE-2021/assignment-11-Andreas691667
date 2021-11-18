@@ -19,8 +19,7 @@ int sum (int n)
 int sumtail (int n, int total)
 {
   //precondition: n >= 1
-  if (n < 1)
-    return -1;  
+  assert(n>=1);
 
   if (n == 1)
     return 1 + total;
@@ -32,8 +31,7 @@ int sumtail (int n, int total)
 int sumwhile (int n)
 {
   //precondition: n >= 1
-  if (n < 1)
-    return -1; 
+  assert(n>=1);
   
   int res = 0;
   int temp = n;
