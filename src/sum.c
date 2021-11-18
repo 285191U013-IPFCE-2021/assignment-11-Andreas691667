@@ -18,12 +18,31 @@ int sum (int n)
 /* Sum integers 1 to n */
 int sumtail (int n, int total)
 {
-    return 0;
+  //precondition: n >= 1
+  if (n < 1)
+    return -1;  
+
+  if (n == 1)
+    return 1 + total;
+  else
+    return sumtail(n - 1, n + total);
 }
 
 /* Sum integers 1 to n */
 int sumwhile (int n)
 {
-  return 0;
+  //precondition: n >= 1
+  if (n < 1)
+    return -1; 
+  
+  int res = 0;
+  int temp = n;
+
+  for(int i = 1;i<=n;i++) {
+    res = res + temp;
+    temp = n-i;
+  }
+  
+  return res;
 }
 
